@@ -1,0 +1,22 @@
+.cart-box{
+    width: 220px;
+    height: 400px;
+    background: white;
+    margin: 15px;
+    box-shadow: 10px 5px 20px 2px black;
+    border-radius: 10px;
+}
+.img-cart{
+    width: 220px;
+    height: 330px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+}
+.movie-title{
+    font-size:16px;
+    font-weight: 600;
+}
+.movie-date{
+    margin-top: 10px;
+    color: #929090;
+}

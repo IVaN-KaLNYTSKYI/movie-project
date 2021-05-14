@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import {getMovie} from "../../services/api.movie-tmdb";
 import MovieList from "../movie-list/MovieList";
+import './Movie.css'
 
 export default function Movie() {
     let [movie, setMovie] = useState([]);
@@ -9,7 +10,7 @@ export default function Movie() {
     }, [])
     console.log(movie)
     return (
-        <div>
+        <div className={"conteiner"}>
             {
           movie.map((value,index) => {
               return(<MovieList key={index}

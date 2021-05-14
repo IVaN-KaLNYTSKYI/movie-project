@@ -1,0 +1,9 @@
+.conteiner {
+    width: 1050px;
+    background: #e2e0e0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+}
