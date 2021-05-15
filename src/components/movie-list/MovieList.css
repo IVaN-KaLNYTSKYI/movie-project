@@ -4,7 +4,7 @@
     height: 420px;
     background: white;
     margin: 15px;
-    box-shadow: 10px 5px 60px 0.04px black;
+    box-shadow: 10px 5px 60px 1px black;
     border-radius: 10px;
     position:relative;
 }

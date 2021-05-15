@@ -12,8 +12,8 @@ const getMovie = (page) => {
 const getMovieId = (id) => {
     return axiosInstance.get('/movie/'+id+API_KEY); // promise
 };
-/*const getUserSearch = (page) => {
-    return axiosInstance.get('/users?page='+page); // promise
-};*/
+const getMovieVideos = (id) => {
+    return axiosInstance.get('/movie/'+id+"/videos"+API_KEY); // promise
+};
 
-export {getMovie/*,getUserSearch*/,getMovieId}
+export {getMovie,getMovieVideos,getMovieId}
