@@ -16,6 +16,7 @@
 
 .movie-detail-img {
     box-shadow: 10px 20px 60px 20px black;
+    height: 450px;
 }
 
 .movie-info-detail {
