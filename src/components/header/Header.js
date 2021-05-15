@@ -12,6 +12,9 @@ export default function Header() {
                     <li className={"header-li"}>
                         <Link className={"header-a"} to="/movie">Movie</Link>
                     </li>
+                    <li className={"header-li"}>
+                        <Link className={"header-a"} to="/like">Like</Link>
+                    </li>
                 </ul>
             </div>
         </div>

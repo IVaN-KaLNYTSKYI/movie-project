@@ -20,8 +20,6 @@ export default function Movie() {
             setTotalPage(value.data.total_pages)
         })
     }, [page])
-    console.log(movie)
-    console.log(totalPage)
     return (
         <div className={"main"}>
             <div className={"conteiner"}>

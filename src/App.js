@@ -4,6 +4,7 @@ import Movie from "./components/movie/Movie";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import MovieDetail from "./components/movie-detail/MovieDetail";
+import Like from "./components/like/Like";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
                   }}/>
                   <Route path={`/movie/:id`} render={({match:{params:{id}}})=>{
                       return <MovieDetail id={id}/>
+                  }}/>
+                  <Route exact path={"/like"} render={()=>{
+                      return <Like/>
                   }}/>
               </Switch>
         </Router>
