@@ -3,6 +3,7 @@ import './App.css';
 import Movie from "./components/movie/Movie";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
+import MovieDetail from "./components/movie-detail/MovieDetail";
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
                   <Route exact path={"/"} render={()=>{
                       return <Home/>
                   }}/>
-                  <Route path={"/movie"} render={()=>{
+                  <Route exact path={"/movie"} render={()=>{
                       return <Movie/>
+                  }}/>
+                  <Route path={`/movie/:id`} render={({match:{params:{id}}})=>{
+                      return <MovieDetail id={id}/>
                   }}/>
               </Switch>
         </Router>

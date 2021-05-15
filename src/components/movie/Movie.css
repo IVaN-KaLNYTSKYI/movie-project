@@ -1,3 +1,6 @@
+.main{
+    width: 100%;
+}
 .conteiner {
     width: 1050px;
     background: #e2e0e0;
@@ -6,4 +9,24 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 10px;
+}
+.page-paginator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-page{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.page-info{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
 }

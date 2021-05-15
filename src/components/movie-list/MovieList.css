@@ -1,22 +1,42 @@
+
 .cart-box{
     width: 220px;
-    height: 400px;
+    height: 420px;
     background: white;
     margin: 15px;
-    box-shadow: 10px 5px 20px 2px black;
+    box-shadow: 10px 5px 60px 0.04px black;
     border-radius: 10px;
+    position:relative;
 }
+/*.cart-box:hover{
+    border: 2px solid red;
+}*/
 .img-cart{
     width: 220px;
     height: 330px;
     border-radius: 10px 10px 0 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
+
 }
 .movie-title{
     font-size:16px;
     font-weight: 600;
 }
-.movie-date{
-    margin-top: 10px;
-    color: #929090;
+.movie-rating{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f83939;
+    position: absolute;
+    bottom: 70px;
+    left: 160px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie-rating span{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
 }
