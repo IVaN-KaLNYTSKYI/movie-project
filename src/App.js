@@ -15,10 +15,10 @@ function App() {
                   <Route exact path={"/"} render={()=>{
                       return <Home/>
                   }}/>
-                  <Route exact path={"/movie"} render={()=>{
+                  <Route exact path={"/movies"} render={()=>{
                       return <Movie/>
                   }}/>
-                  <Route path={`/movie/:id`} render={({match:{params:{id}}})=>{
+                  <Route path={`/movies/:id`} render={({match:{params:{id}}})=>{
                       return <MovieDetail id={id}/>
                   }}/>
                   <Route exact path={"/like"} render={()=>{

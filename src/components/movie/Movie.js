@@ -19,7 +19,7 @@ export default function Movie() {
             setMovie([...value.data.results])
             setTotalPage(value.data.total_pages)
         })
-    }, [])
+    }, [page])
     return (
         <div className={"main"}>
             <div className={"conteiner"}>
