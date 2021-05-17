@@ -8,10 +8,10 @@ export default function Movie() {
     let [page, setPage] = useState(1);
     let [totalPage, setTotalPage] = useState(null);
 
-    const back = () => { page>1?setPage(page-1):setPage(1)}
+    const back = () => {page > 1 ? setPage(page - 1) : setPage(1)}
     const firstPage = () => {setPage(1)}
 
-    const next = () => { page<totalPage?setPage(page+1):setPage(totalPage)}
+    const next = () => {page < totalPage ? setPage(page + 1) : setPage(totalPage)}
     const lastPage = () => {setPage(totalPage)}
 
     useEffect(() => {
@@ -19,7 +19,8 @@ export default function Movie() {
             setMovie([...value.data.results])
             setTotalPage(value.data.total_pages)
         })
-    }, [page])
+    },[page])
+
     return (
         <div className={"main"}>
             <div className={"conteiner"}>
