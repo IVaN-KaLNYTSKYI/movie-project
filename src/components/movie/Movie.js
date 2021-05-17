@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {getMovie} from "../../services/api.movie-tmdb";
+import {getMovie, getMovieSearch} from "../../services/api.movie-tmdb";
 import MovieList from "../movie-list/MovieList";
 import './Movie.css'
 
@@ -7,6 +7,7 @@ export default function Movie() {
     let [movie, setMovie] = useState([]);
     let [page, setPage] = useState(1);
     let [totalPage, setTotalPage] = useState(null);
+    let [text, setText] = useState("");
 
     const back = () => {page > 1 ? setPage(page - 1) : setPage(1)}
     const firstPage = () => {setPage(1)}
@@ -20,9 +21,21 @@ export default function Movie() {
             setTotalPage(value.data.total_pages)
         })
     },[page])
-
+    useEffect(() => {
+        getMovieSearch(page, text).then(value => {
+            setMovie([...value.data.results])
+            setTotalPage(value.data.total_pages)
+        })
+    }, [page])
+    const add = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className={"main"}>
+            <form onClick={add}>
+                <input onChange={(e) => setText(e.target.value)}/>
+                <button>bbb</button>
+            </form>
             <div className={"conteiner"}>
                 {
                     movie.map((value, index) => {
