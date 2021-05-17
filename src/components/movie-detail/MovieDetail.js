@@ -73,9 +73,7 @@ return (
                                 Language:<span>{movieDetail.original_language}</span></div>
                             <div className={"movie-detail-pop"}>Popularity:<span>{movieDetail.popularity}</span></div>
                             <div className={"movie-detail-ove"}>Overview:<span>{movieDetail.overview}</span></div>
-                            {/*{flagBtn?*/}
-                                {/*(<button>no</button>):*/}(<button onClick={like}>{flagBtn?"yes":"no"}</button>)
-                        {/*    }*/}
+                            <button className={"like-btn"} onClick={like}>like</button>
                         </div>
                     </div>
                 </div>

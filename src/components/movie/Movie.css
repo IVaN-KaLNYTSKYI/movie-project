@@ -30,3 +30,20 @@
     font-weight: 600;
     margin-top: 10px;
 }
+.search{
+    padding: 10px;
+    width: 1050px;
+    margin: 0 auto;
+}
+.search form{
+    width: 500px;
+    margin: 0 auto;
+}
+.search form input{
+    background: #e9e6e6;
+    border-radius: 20px;
+    border: none;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+}

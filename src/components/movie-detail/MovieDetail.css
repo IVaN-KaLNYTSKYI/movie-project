@@ -84,3 +84,8 @@
     color: white;
     margin-left: 5px;
 }
+.like-btn{
+    margin:30px 50px 0px 300px;
+    width: 100px;
+    height: 30px;
+}

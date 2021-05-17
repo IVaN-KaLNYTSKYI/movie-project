@@ -8,34 +8,47 @@ export default function Movie() {
     let [page, setPage] = useState(1);
     let [totalPage, setTotalPage] = useState(null);
     let [text, setText] = useState("");
+    let [flagStyle, setFlagStyle] = (useState(JSON.parse(localStorage.getItem("style")))||false);
+console.log(flagStyle)
+    const back = () => {
+        page > 1 ? setPage(page - 1) : setPage(1)
+    }
+    const firstPage = () => {
+        setPage(1)
+    }
 
-    const back = () => {page > 1 ? setPage(page - 1) : setPage(1)}
-    const firstPage = () => {setPage(1)}
+    const next = () => {
+        page < totalPage ? setPage(page + 1) : setPage(totalPage)
+    }
+    const lastPage = () => {
+        setPage(totalPage)
+    }
 
-    const next = () => {page < totalPage ? setPage(page + 1) : setPage(totalPage)}
-    const lastPage = () => {setPage(totalPage)}
 
     useEffect(() => {
         getMovie(page).then(value => {
             setMovie([...value.data.results])
             setTotalPage(value.data.total_pages)
         })
-    },[page])
-    useEffect(() => {
         getMovieSearch(page, text).then(value => {
             setMovie([...value.data.results])
             setTotalPage(value.data.total_pages)
         })
-    }, [page])
-    const add = (e) => {
-        e.preventDefault();
-    }
+
+    }, [page, text])
+const fil=( {target: { checked }})=>{
+    setFlagStyle(checked);
+}
+    localStorage.setItem("style",flagStyle)
+    console.log(flagStyle)
     return (
         <div className={"main"}>
-            <form onClick={add}>
-                <input onChange={(e) => setText(e.target.value)}/>
-                <button>bbb</button>
-            </form>
+            <input type={"checkbox"}  checked={localStorage.getItem("style")} onChange={fil}/>
+            <div className={"search"} style={flagStyle?{background:"red"}:{background:"gold"}}>
+                <form>
+                <input  placeholder={"Search"} onChange={(event => setText(event.target.value))}/>
+                </form>
+            </div>
             <div className={"conteiner"}>
                 {
                     movie.map((value, index) => {
