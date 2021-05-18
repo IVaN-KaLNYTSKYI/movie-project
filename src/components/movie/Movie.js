@@ -8,7 +8,7 @@ export default function Movie() {
     let [page, setPage] = useState(1);
     let [totalPage, setTotalPage] = useState(null);
     let [text, setText] = useState("");
-  /*  let [flagStyle, setFlagStyle] = useState(false)*/
+    /*  let [flagStyle, setFlagStyle] = useState(false)*/
 
     const back = () => {
         page > 1 ? setPage(page - 1) : setPage(1)
@@ -41,7 +41,7 @@ export default function Movie() {
         <div className={"main"}>
             <div className={"search"}>
                 <form>
-                <input  placeholder={"Search"} onChange={(event => setText(event.target.value))}/>
+                    <input placeholder={"Search"} onChange={(event => setText(event.target.value))}/>
                 </form>
             </div>
             <div className={"conteiner"}>

@@ -5,6 +5,7 @@ let options={
 }
 
 let axiosInstance = axios.create(options);
+
 const API_KEY="?api_key=8aaf14eada5c1779a594aaa553b31207"
 const getMovie = (page) => {
     return axiosInstance.get('/discover/movie'+API_KEY+"&page="+page); // promise
@@ -18,5 +19,9 @@ const getMovieVideos = (id) => {
 const getMovieSearch = (page,text) => {
     return axiosInstance.get("/search/movie"+API_KEY+"&query="+text+"&page="+page); // promise
 };
+const getMoviePopular=()=>{
+    return axiosInstance.get("/movie/popular"+API_KEY+"&query=1");
 
-export {getMovie,getMovieVideos,getMovieId,getMovieSearch}
+}
+
+export {getMovie,getMovieVideos,getMovieId,getMovieSearch,getMoviePopular}
