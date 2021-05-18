@@ -1,0 +1,33 @@
+.like{
+    width: 1050px;
+    background: #e2e0e0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    position:relative;
+}
+.cart-like-box{
+    width: 220px;
+    height: 330px;
+    background: white;
+    margin: 15px;
+    box-shadow: 10px 5px 60px 1px black;
+    border-radius: 10px;
+    position:relative;
+}
+.btn-like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background:none;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    color: #ea1515;
+    border: none;
+    font-size: 20px;
+}

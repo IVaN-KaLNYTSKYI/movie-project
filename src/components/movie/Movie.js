@@ -8,8 +8,8 @@ export default function Movie() {
     let [page, setPage] = useState(1);
     let [totalPage, setTotalPage] = useState(null);
     let [text, setText] = useState("");
-    let [flagStyle, setFlagStyle] = (useState(JSON.parse(localStorage.getItem("style")))||false);
-console.log(flagStyle)
+  /*  let [flagStyle, setFlagStyle] = useState(false)*/
+
     const back = () => {
         page > 1 ? setPage(page - 1) : setPage(1)
     }
@@ -36,15 +36,10 @@ console.log(flagStyle)
         })
 
     }, [page, text])
-const fil=( {target: { checked }})=>{
-    setFlagStyle(checked);
-}
-    localStorage.setItem("style",flagStyle)
-    console.log(flagStyle)
+
     return (
         <div className={"main"}>
-            <input type={"checkbox"}  checked={localStorage.getItem("style")} onChange={fil}/>
-            <div className={"search"} style={flagStyle?{background:"red"}:{background:"gold"}}>
+            <div className={"search"}>
                 <form>
                 <input  placeholder={"Search"} onChange={(event => setText(event.target.value))}/>
                 </form>

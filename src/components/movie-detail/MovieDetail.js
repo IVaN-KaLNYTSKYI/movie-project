@@ -8,7 +8,6 @@ export default function MovieDetail({id}) {
     let [movieDetail, setMovieDetail] = useState(null);
     let [movieDetailVideos, setMovieDetailVideos] = useState(null);
     let [items, setItems] = useState(item || [])
-    let [flagBtn, setFlagBtn] = useState(false)
     useEffect(() => {
         localStorage.setItem("like", JSON.stringify(items))
     })
@@ -19,7 +18,6 @@ export default function MovieDetail({id}) {
 
         if(!flagItems) {
             items.push(a)
-            setFlagBtn(true)
         }else {
             alert(`${movieDetail.title}`)
         }
