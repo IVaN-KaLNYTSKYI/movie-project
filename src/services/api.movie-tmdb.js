@@ -5,13 +5,17 @@ let options={
 }
 
 let axiosInstance = axios.create(options);
+const path={
+    discover:'/discover/movie',
+    movie:'/movie/'
+}
 
 const API_KEY="?api_key=8aaf14eada5c1779a594aaa553b31207"
 const getMovie = (page) => {
-    return axiosInstance.get('/discover/movie'+API_KEY+"&page="+page); // promise
+    return axiosInstance.get(path.discover+API_KEY+"&page="+page); // promise
 };
 const getMovieId = (id) => {
-    return axiosInstance.get('/movie/'+id+API_KEY); // promise
+    return axiosInstance.get(path.movie+id+API_KEY); // promise
 };
 const getMovieVideos = (id) => {
     return axiosInstance.get('/movie/'+id+"/videos"+API_KEY); // promise
