@@ -1,0 +1,15 @@
+.footer{
+    border-top:1px solid silver ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.footer img{
+    width: 50px;
+
+}
+.footer a{
+text-decoration: none;
+    margin-right: 10px;
+}

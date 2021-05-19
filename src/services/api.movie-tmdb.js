@@ -20,8 +20,12 @@ const getMovieSearch = (page,text) => {
     return axiosInstance.get("/search/movie"+API_KEY+"&query="+text+"&page="+page); // promise
 };
 const getMoviePopular=()=>{
-    return axiosInstance.get("/movie/popular"+API_KEY+"&query=1");
+    return axiosInstance.get("/movie/popular"+API_KEY+"&page=1");
+
+}
+const getMovieNoPopular=()=>{
+    return axiosInstance.get("/movie/popular"+API_KEY+"&page=434");
 
 }
 
-export {getMovie,getMovieVideos,getMovieId,getMovieSearch,getMoviePopular}
+export {getMovie,getMovieVideos,getMovieId,getMovieSearch,getMoviePopular,getMovieNoPopular}

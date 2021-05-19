@@ -45,7 +45,8 @@ export default function MovieDetail({id}) {
         <div className={"movie-detail-box"}>
             {
                 movieDetail && (
-                    <div className={"movie-detail"}>
+                    <div className={"movie-detail"} style={{backgroundImage:`linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.6)),url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
+                        backgroundSize:"cover"}}>
                         <div className={"movie-box-img"}>
                             <img className={"movie-detail-img"}
                                  src={'https://image.tmdb.org/t/p/w300' + movieDetail.poster_path}
