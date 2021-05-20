@@ -8,6 +8,7 @@ import Like from "./components/like/Like";
 import Footer from "./components/footer/Footer";
 import {useEffect, useState} from "react";
 
+
 function App() {
     let [flag, setFlag] = useState(getStyle())
 
