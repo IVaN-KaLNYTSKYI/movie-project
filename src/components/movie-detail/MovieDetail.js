@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {getMovieId, getMovieVideos} from "../../services/api.movie-tmdb";
 import MovieVideos from "../movie-videos/MovieVideos";
 
-export default function MovieDetail({id}) {
+export default function MovieDetail({id,flag}) {
 
     const item = JSON.parse(localStorage.getItem("like"))
 
@@ -42,7 +42,7 @@ export default function MovieDetail({id}) {
     }
 
     return (
-        <div className={"movie-detail-box"}>
+        <div className={flag?"movie-detail-box-dark":"movie-detail-box"}>
             {
                 movieDetail && (
                     <div className={"movie-detail"} style={{backgroundImage:`linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.6)),url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,

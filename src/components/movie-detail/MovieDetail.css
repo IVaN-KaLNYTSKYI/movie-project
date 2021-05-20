@@ -1,13 +1,13 @@
 * {
     box-sizing: border-box;
 }
-
+.movie-detail-box-dark{
+    background: #081a30;
+}
 .movie-detail {
     width: 100%;
     min-height: 500px;
-    /*background: #d7d7d7;*/
     display: flex;
-
 
 }
 

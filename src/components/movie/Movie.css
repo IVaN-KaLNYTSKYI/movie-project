@@ -1,9 +1,22 @@
 .main{
     width: 100%;
 }
+.main-dark{
+    width: 100%;
+    background: #081a30;
+}
 .conteiner {
     width: 1050px;
     background: #fafafa;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.conteiner-dark{
+    width: 1050px;
+    background: #c12121;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -24,11 +37,18 @@
     border: none;
     text-transform: uppercase;
     font-size: 12px;
+    background: silver;
 }
 .page-info{
     font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
+}
+.page-info-dark{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: white;
 }
 .search{
     padding: 10px;

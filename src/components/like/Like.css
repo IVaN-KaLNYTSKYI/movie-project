@@ -1,3 +1,6 @@
+.like-box-dark{
+    background: #081a30;
+}
 .like{
     width: 1050px;
     background: #e2e0e0;
@@ -9,10 +12,20 @@
     position:relative;
     min-height: 70vh;
 }
+.like-dark{
+    width: 1050px;
+    background: #c12121;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    position:relative;
+    min-height: 70vh;
+}
 .cart-like-box{
     width: 220px;
     height: 330px;
-    background: white;
     margin: 15px;
     box-shadow: 10px 5px 60px 1px black;
     border-radius: 10px;

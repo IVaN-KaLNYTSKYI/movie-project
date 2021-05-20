@@ -4,8 +4,7 @@ import "./MoviePopular.css"
 import {Link} from "react-router-dom";
 
 
-export default function Home() {
-
+export default function Home({flag}) {
     const [moviePopular, setMoviePopular] = useState([])
     const [movieNoPopular, setMovieNoPopular] = useState([])
     useEffect(() => {
@@ -20,8 +19,8 @@ export default function Home() {
     console.log(movieNoPopular)
 
     return (
-        <div>
-            <div className={"popular-title"}><span>Popular Films</span></div>
+        <div className={flag?"bod-dark":"bod"}>
+            <div className={flag?"popular-title-dark":"popular-title"}><span>Popular Films</span></div>
             <div className={"home"}>
                 {
                     moviePopular.map(value => {
@@ -34,7 +33,7 @@ export default function Home() {
                     })
                 }
             </div>
-            <div className={"popular-title"}><span>Not Popular Films</span></div>
+            <div className={flag?"popular-title-dark":"popular-title"}><span>Not Popular Films</span></div>
             <div className={"home"}>
                 {
                     movieNoPopular.map(value => {
